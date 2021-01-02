@@ -1,0 +1,18 @@
+@import "vars";
+
+body {
+    background-color: $body__bg-color;
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color-1;
+}
+
+.page {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 1090px;
+}
