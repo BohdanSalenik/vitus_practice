@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .container {
@@ -164,6 +165,12 @@ main {
     letter-spacing: 2px;
     background-color: $secondary-blue;
     padding: 17px 93px;
+    transition: background-color .2s linear;
+
+    &:hover {
+        background-color: $button-hover;
+        box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+    }
 }
 
 /*-------------------------------------main-banner end-----------------------------*/
@@ -189,7 +196,7 @@ main {
     background: transparent;
     padding: 16px;
     position: relative;
-    transition: background-color .3s linear, opacity .2s linear, box-shadow .2s linear;
+    transition: background-color .4s linear, opacity .2s linear, box-shadow .2s linear;
 
     &:hover {
         background-color: $card__hover-bg;
@@ -283,3 +290,138 @@ main {
     top: 33%;
     right: -21px;
 }
+
+/*--------------------------------------cards end-------------------------------------*/
+
+/*----------------------------------benefits-strip-----------------------------------*/
+
+.benefits-strip {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background-color: $secondary-blue;
+    margin-bottom: 100px;
+}
+
+.benefits-strip__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secure, .free-shipping, .warranty {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+
+    img {
+        margin-right: 20px;
+    }
+}
+
+/*----------------------------------benefits-strip end-----------------------------------*/
+
+/*---------------------------------------banners-----------------------------------*/
+
+.banners {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 27.638% 42.5% 27.638%;
+    grid-column-gap: 16px;
+    margin-bottom: 160px;
+}
+
+.banner__1 {
+    background-image: url("/img/banners/banner__1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 150%;
+}
+
+.banner__2 {
+    background-image: url("/img/banners/banner__2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 98%;
+}
+
+.banner__3-1 {
+    background-image: url("/img/banners/banner__3.1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 74.371%;
+}
+
+.banner__3-2 {
+    background-image: url("/img/banners/banner__3.2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 74.371%;
+}
+
+.banner__3 {
+    display: grid;
+    grid-template-rows: 49.3% 49.3%;
+    grid-row-gap: 14px;
+}
+
+
+.banner__text-1 {
+    height: 190px;
+    background: rgba(46, 46, 46, 0.8);
+    margin-top: -190px;
+    padding: 32px 56px;
+
+    .subtitle-1 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .banner__title-1 {
+        font-size: 34px;
+        font-weight: 600;
+        margin: 9px 0;
+    }
+
+    .subtitle-2 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.banner__text-2 {
+    height: 114px;
+    background: rgba(46, 46, 46, 0.8);
+    margin-top: -114px;
+    padding: 16px 32px;
+
+    .subtitle-1 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .banner__title-1 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 5px 0;
+    }
+
+    .subtitle-2 {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+/*---------------------------------------banners end-----------------------------------*/
