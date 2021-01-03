@@ -1,5 +1,5 @@
 body {
-  background-color: #333333;
+  background-color: #2e2e2e;
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
 }
@@ -148,4 +148,112 @@ main {
   letter-spacing: 2px;
   background-color: #7A5CE6;
   padding: 17px 93px;
+}
+
+/*-------------------------------------main-banner end-----------------------------*/
+/*--------------------------------------cards-------------------------------------*/
+.cards {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 100px 0;
+}
+
+.cards__items {
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-column-gap: 8px;
+  position: relative;
+}
+
+.cards__item {
+  height: 338px;
+  background: transparent;
+  padding: 16px;
+  position: relative;
+  transition: background-color .3s linear, opacity .2s linear, box-shadow .2s linear;
+}
+.cards__item:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+}
+.cards__item:hover .card__basket {
+  opacity: 1;
+}
+.cards__item:hover .card-selected-white {
+  display: block;
+}
+.cards__item:hover .card-selected-grey {
+  display: none;
+}
+
+.card__photo {
+  margin-bottom: 16px;
+}
+
+.card__title {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card__price {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.stars__rate {
+  display: flex;
+  align-items: center;
+}
+.stars__rate img {
+  height: 12.5px;
+  width: 12.5px;
+}
+.stars__rate img:hover {
+  transform: scale(1.1);
+}
+.stars__rate p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.card__selected {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.card-selected-white {
+  display: none;
+}
+
+.card__basket {
+  height: 30px;
+  width: 30px;
+  background-color: #7A5CE6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 19px;
+  right: 19px;
+  opacity: 0;
+}
+
+.slider__arrow-left {
+  position: absolute;
+  top: 33%;
+  left: -21px;
+}
+
+.slider__arrow-right {
+  position: absolute;
+  top: 33%;
+  right: -21px;
 }
