@@ -53,6 +53,7 @@ a:hover {
   color: inherit;
   font-weight: 500;
   margin-left: 8px;
+  text-decoration: underline;
 }
 
 .close__top-bar {
@@ -150,3 +151,41 @@ header {
 
 /*---------------------------------------header end--------------------------------*/
 /*-------------------------------------main-banner--------------------------------*/
+main {
+  width: 100%;
+}
+
+.main-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0 48px 0;
+  background-image: url("/img/bg-image__main-banner.png");
+  background-size: cover;
+  height: 278px;
+}
+
+.main-banner__preview {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.main-banner__title {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.main-manner__button {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: #7A5CE6;
+  padding: 17px 93px;
+}
