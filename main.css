@@ -19,6 +19,15 @@ body {
 
 .container {
   width: 1240px;
+  margin: 0 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 /*-----------------------------------top-bar------------------------------------------*/
@@ -61,8 +70,83 @@ body {
 /*------------------------------------top-bar end---------------------------------------*/
 /*------------------------------------header------------------------------------------*/
 header {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
+  height: 80px;
   background-color: #212121;
-  padding: 24px 0;
 }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-logo {
+  margin-right: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+}
+.main-nav a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav__item {
+  padding: 32px 16px 29px 16px;
+}
+.nav__item:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px solid #7A5CE6;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account-settings__item {
+  margin-left: 40px;
+}
+
+/*---------------------------------------header end--------------------------------*/
+/*-------------------------------------main-banner--------------------------------*/
