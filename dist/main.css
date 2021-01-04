@@ -230,6 +230,14 @@ main {
   grid-column-gap: 8px;
   position: relative;
 }
+@media (max-width: 1281px) {
+  .cards__items .slider__arrow-left {
+    left: 0;
+  }
+  .cards__items .slider__arrow-right {
+    right: 0;
+  }
+}
 @media (max-width: 1025px) {
   .cards__items {
     grid-template-columns: repeat(5, 200px);
@@ -569,6 +577,18 @@ main {
 }
 .trouvaille-cards .slider__arrow-right {
   right: -52px;
+}
+@media (max-width: 1281px) {
+  .trouvaille-cards {
+    grid-column-gap: 8px;
+    justify-content: center;
+  }
+  .trouvaille-cards .slider__arrow-left {
+    left: 15px;
+  }
+  .trouvaille-cards .slider__arrow-right {
+    right: 15px;
+  }
 }
 @media (max-width: 1025px) {
   .trouvaille-cards {

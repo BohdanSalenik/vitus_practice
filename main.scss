@@ -252,6 +252,16 @@ main {
     grid-column-gap: 8px;
     position: relative;
 
+    @include brakepoint($laptop_l-bp) {
+        .slider__arrow-left {
+            left: 0;
+        }
+
+        .slider__arrow-right {
+            right: 0;
+        }
+    }
+
     @include brakepoint($laptop-bp) {
         grid-template-columns: repeat(5, 200px);
         grid-column-gap: 0px;
@@ -616,6 +626,19 @@ main {
 
     .slider__arrow-right {
         right: -52px;
+    }
+
+    @include brakepoint($laptop_l-bp) {
+        grid-column-gap: 8px;
+        justify-content: center;
+
+        .slider__arrow-left {
+            left: 15px;
+        }
+
+        .slider__arrow-right {
+            right: 15px;
+        }
     }
 
     @include brakepoint($laptop-bp) {
