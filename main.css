@@ -155,6 +155,16 @@ header {
 .account-settings__item {
   margin-left: 40px;
 }
+.account-settings__item a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.account-settings__item img {
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+}
 
 /*---------------------------------------header end--------------------------------*/
 /*-------------------------------------main-banner--------------------------------*/
@@ -295,6 +305,16 @@ main {
   top: 30px;
   right: 30px;
 }
+.card__selected img {
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+}
+.card__selected:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .card-selected-white {
   display: none;
@@ -318,6 +338,16 @@ main {
   bottom: 19px;
   right: 19px;
   opacity: 0;
+}
+.card__basket img {
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+}
+.card__basket:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .slider__arrow-left {
@@ -545,4 +575,105 @@ main {
 .cards__item--tr .card__basket img {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
 }
+.cards__item--tr .card__basket:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+/*------------------------------------new-trouvaille end-------------------------------*/
+/*------------------------------------share-choice-------------------------------------*/
+.share-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 160px;
+}
+
+.share-choice__title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 37px;
+}
+
+.share-hashtag {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.insta-shares {
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 406px);
+  grid-template-rows: 406px;
+  grid-column-gap: 16px;
+}
+
+.insta-shares__item-1, .insta-shares__item-2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+.insta-shares__item-1:hover .insta-active, .insta-shares__item-2:hover .insta-active {
+  opacity: 1;
+}
+
+.insta-shares__item-1 {
+  background-image: url("/img/insta-shares/insta-shares-1.png");
+}
+
+.insta-shares__item-2 {
+  background-image: url("/img/insta-shares/insta-shares-2.png");
+}
+
+.insta-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  width: 406px;
+  height: 406px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -100%;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+}
+
+.insta-active__icon {
+  margin-bottom: 17px;
+}
+
+.insta-active__link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*------------------------------------share-choice end----------------------------------*/
+/*------------------------------------subscription-------------------------------------*/
