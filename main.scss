@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 body {
     background-color: $body__bg-color;
@@ -15,7 +16,7 @@ body {
 
 .container {
     width: 1240px;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 a {
@@ -71,6 +72,22 @@ a {
     }
 }
 
+.top-bar__tablet-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    a {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    @include brakepoint($laptop-bp) {
+        display: block;
+    }
+}
+
 /*------------------------------------top-bar end---------------------------------------*/
 
 
@@ -83,6 +100,10 @@ header {
     width: 100%;
     height: 80px;
     background-color: $header__bg-color;
+
+    @include brakepoint($laptop-bp) {
+        height: 64px;
+    }
 }
 
 .header {
@@ -98,6 +119,12 @@ header {
     margin-right: 40px;
     align-items: center;
     display: flex;
+
+    a {
+        @include brakepoint($laptop-bp) {
+            width: 110px;
+        }
+    }
 }
 
 .main-nav {
@@ -107,6 +134,10 @@ header {
     a {
         font-size: 14px;
         font-weight: 400;
+    }
+
+    @include brakepoint($laptop-bp) {
+        display: none;
     }
 }
 
@@ -159,6 +190,12 @@ main {
     background-image: url("/img/bg-image__main-banner.png");
     background-size: cover;
     height: 278px;
+
+    @include brakepoint($laptop-bp) {
+        height: 662px;
+        background-image: url("/img/main-banner-bg-tablet.png");
+        padding: 307px 0 153px 0;
+    }
 }
 
 .main-banner__preview {
@@ -173,6 +210,10 @@ main {
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 40px;
+
+    @include brakepoint($laptop-bp) {
+        margin-bottom: 53px;
+    }
 }
 
 .main-manner__button {
@@ -199,6 +240,10 @@ main {
     display: flex;
     justify-content: center;
     padding: 30px 0 100px 0;
+
+    @include brakepoint($laptop-bp) {
+        padding: 30px 0 66px 0;
+    }
 }
 
 .cards__items {
@@ -206,6 +251,15 @@ main {
     grid-template-columns: repeat(6, 200px);
     grid-column-gap: 8px;
     position: relative;
+
+    @include brakepoint($laptop-bp) {
+        grid-template-columns: repeat(5, 200px);
+        grid-column-gap: 0px;
+
+        .cards__item--6 {
+            display: none;
+        }
+    }
 }
 
 .cards__item {
@@ -231,6 +285,22 @@ main {
             display: none;
         }
     }
+
+    @include brakepoint($laptop-bp) {
+        &:hover {
+            background-color: transparent;
+            box-shadow: none;
+            
+            .card__photo {
+                box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+            }
+
+            .card__basket {
+                background-color: $secondary-blue;
+            }
+        }
+    }
+    
 }
 
 .card__photo {
@@ -314,18 +384,35 @@ main {
             transform: scale(1.1);
         }
     }
+
+    @include brakepoint($laptop-bp) {
+        opacity: 1;
+        background-color: #97979B;
+    }
+
 }
 
 .slider__arrow-left {
     position: absolute;
     top: 33%;
     left: -21px;
+
+    @include brakepoint($laptop-bp) {
+        top: 45%;
+        left: 0px;
+    }
+
 }
 
 .slider__arrow-right {
     position: absolute;
     top: 33%;
     right: -21px;
+
+    @include brakepoint($laptop-bp) {
+        top: 45%;
+        right: 0px;
+    }
 }
 
 /*--------------------------------------cards end-------------------------------------*/
@@ -339,6 +426,10 @@ main {
     height: 120px;
     background-color: $secondary-blue;
     margin-bottom: 100px;
+
+    @include brakepoint($laptop-bp) {
+        margin-bottom: 80px;
+    }
 }
 
 .benefits-strip__content {
@@ -368,6 +459,10 @@ main {
     grid-template-columns: 27.638% 42.5% 27.638%;
     grid-column-gap: 16px;
     margin-bottom: 160px;
+
+    @include brakepoint($laptop-bp) {
+        margin-bottom: 122px;
+    }
 }
 
 .banner__1 {
@@ -419,6 +514,10 @@ main {
     margin-top: -190px;
     padding: 32px 56px;
 
+    @include brakepoint($laptop-bp) {
+        padding: 25px 40px;
+    }
+
     .subtitle-1 {
         font-size: 12px;
         font-weight: 500;
@@ -428,12 +527,22 @@ main {
         font-size: 34px;
         font-weight: 600;
         margin: 9px 0;
+
+        @include brakepoint($laptop-bp) {
+            font-size: 27px;
+        }
     }
 
     .subtitle-2 {
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
+
+        @include brakepoint($laptop-bp) {
+            br {
+                display: none;
+            }
+        }
     }
 }
 
@@ -443,15 +552,29 @@ main {
     margin-top: -114px;
     padding: 16px 32px;
 
+    @include brakepoint($laptop-bp) {
+        padding: 8px 22px;
+        height: 105px;
+        margin-top: -105px;
+    }
+
     .subtitle-1 {
         font-size: 12px;
         font-weight: 500;
+
+        @include brakepoint($laptop-bp) {
+            font-size: 10px;
+        }
     }
 
     .banner__title-1 {
         font-size: 22px;
         font-weight: 600;
         margin: 5px 0;
+
+        @include brakepoint($laptop-bp) {
+            margin: 0;
+        }
     }
 
     .subtitle-2 {
@@ -471,6 +594,10 @@ main {
     flex-direction: column;
     width: 100%;
     margin-bottom: 160px;
+
+    @include brakepoint($laptop-bp) {
+        margin-bottom: 130px;
+    }
 }
 
 .trouvaille__title {
@@ -489,6 +616,26 @@ main {
 
     .slider__arrow-right {
         right: -52px;
+    }
+
+    @include brakepoint($laptop-bp) {
+        grid-template-columns: repeat(3, 294px);
+        grid-column-gap: 0px;
+        justify-content: center;
+
+        .cards__item--tr-1 {
+            display: none;
+        }
+
+        .slider__arrow-left {
+            top: 36%;
+            left: 10%;
+        }
+
+        .slider__arrow-right {
+            top: 36%;
+            right: 10%;
+        }
     }
 }
 
@@ -513,6 +660,21 @@ main {
 
         .card-selected-grey {
             display: none;
+        }
+    }
+
+    @include brakepoint($laptop-bp) {
+        &:hover {
+            background-color: transparent;
+            box-shadow: none;
+            
+            .card__photo {
+                box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+            }
+
+            .card__basket {
+                background-color: $secondary-blue;
+            }
         }
     }
 
@@ -561,6 +723,10 @@ main {
     flex-direction: column;
     width: 100%;
     margin-bottom: 160px;
+
+    @include brakepoint($laptop-bp) {
+        margin-bottom: 120px;
+    }
 }
 
 .share-choice__title {
@@ -699,6 +865,10 @@ main {
 .subscription__button {
     margin-left: 115px;
 
+    @include brakepoint($laptop-bp) {
+        margin-left: 55px;
+    }
+
     a {
         font-weight: 600;
         font-size: 14px;
@@ -711,6 +881,10 @@ main {
             background-color: $button-hover;
             color: white;
             box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        @include brakepoint($laptop-bp) {
+            padding: 16px 70px;
         }
     }
 }
