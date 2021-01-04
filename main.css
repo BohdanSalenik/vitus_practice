@@ -677,3 +677,106 @@ main {
 
 /*------------------------------------share-choice end----------------------------------*/
 /*------------------------------------subscription-------------------------------------*/
+.subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-color: #212121;
+  margin-bottom: 160px;
+}
+
+.subscription__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscription__content-left {
+  padding: 37px 0 39px 0px;
+}
+
+.subscription__title {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 11px;
+}
+
+.subscription__subtitle {
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.subscription__content-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 63px;
+}
+
+.input__email {
+  display: block;
+  width: 285px;
+  padding: .5rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #F1F2F3;
+  border-radius: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 18px;
+  color: #fff;
+}
+.input__email:focus {
+  outline: none;
+  border-bottom: 1px solid #7A5CE6;
+}
+.input__email::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.input__email:-ms-input-placeholder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.input__email::-ms-input-placeholder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.input__email::placeholder {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.subscription__button {
+  margin-left: 115px;
+}
+.subscription__button a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 16px 112px;
+  background-color: #7A5CE6;
+}
+.subscription__button a:hover {
+  background-color: #593CC0;
+  color: white;
+  -webkit-box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+}
