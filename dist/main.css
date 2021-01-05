@@ -830,11 +830,16 @@ main {
 }
 
 .insta-shares {
-  align-self: flex-start;
+  width: 1440px;
+  align-self: center;
   display: grid;
   grid-template-columns: repeat(6, 406px);
   grid-template-rows: 406px;
   grid-column-gap: 16px;
+  overflow-x: hidden;
+}
+.insta-shares:hover {
+  overflow-x: scroll;
 }
 
 .insta-shares__item-1, .insta-shares__item-2 {
