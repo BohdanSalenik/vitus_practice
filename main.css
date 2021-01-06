@@ -277,7 +277,7 @@ header {
 
 .header__mobile-nav {
   overflow: auto;
-  position: fixed;
+  position: absolute;
   right: 0;
   opacity: 0;
   top: 38px;
@@ -296,6 +296,7 @@ header {
 
 .header__mobile-nav.active {
   opacity: 1;
+  position: fixed;
 }
 
 .header__mobile-nav__list {
@@ -446,6 +447,18 @@ main {
   }
   .cards__items .cards__item--6 {
     display: none;
+  }
+}
+@media (max-width: 769px) {
+  .cards__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 8px;
+  }
+  .cards__items .cards__item--6 {
+    display: block;
   }
 }
 
@@ -654,6 +667,11 @@ main {
 .secure img, .free-shipping img, .warranty img {
   margin-right: 20px;
 }
+@media (max-width: 769px) {
+  .secure, .free-shipping, .warranty {
+    font-size: 14px;
+  }
+}
 
 /*----------------------------------benefits-strip end-----------------------------------*/
 /*---------------------------------------banners-----------------------------------*/
@@ -667,6 +685,11 @@ main {
 @media (max-width: 1025px) {
   .banners {
     margin-bottom: 122px;
+  }
+}
+@media (max-width: 769px) {
+  .banners {
+    grid-column-gap: 10px;
   }
 }
 
@@ -711,6 +734,11 @@ main {
   grid-template-rows: 49.3% 49.3%;
   grid-row-gap: 14px;
 }
+@media (max-width: 769px) {
+  .banner__3 {
+    grid-row-gap: 7px;
+  }
+}
 
 .banner__text-1 {
   height: 190px;
@@ -723,6 +751,11 @@ main {
     padding: 17px 38px;
     height: 129px;
     margin-top: -129px;
+  }
+}
+@media (max-width: 769px) {
+  .banner__text-1 {
+    padding: 16px 19px;
   }
 }
 .banner__text-1 .subtitle-1 {
@@ -740,6 +773,11 @@ main {
     margin: 1px 0;
   }
 }
+@media (max-width: 769px) {
+  .banner__text-1 .banner__title-1 {
+    font-size: 22px;
+  }
+}
 .banner__text-1 .subtitle-2 {
   font-size: 14px;
   font-weight: 400;
@@ -748,6 +786,11 @@ main {
 @media (max-width: 1025px) {
   .banner__text-1 .subtitle-2 br {
     display: none;
+  }
+}
+@media (max-width: 769px) {
+  .banner__text-1 .subtitle-2 {
+    font-size: 11px;
   }
 }
 
@@ -762,6 +805,13 @@ main {
     padding: 8px 22px;
     height: 105px;
     margin-top: -105px;
+  }
+}
+@media (max-width: 769px) {
+  .banner__text-2 {
+    padding: 8px 10px;
+    height: 90px;
+    margin-top: -90px;
   }
 }
 .banner__text-2 .subtitle-1 {
@@ -783,10 +833,20 @@ main {
     margin: 0;
   }
 }
+@media (max-width: 769px) {
+  .banner__text-2 .banner__title-1 {
+    font-size: 17px;
+  }
+}
 .banner__text-2 .subtitle-2 {
   font-size: 10px;
   font-weight: 400;
   line-height: 18px;
+}
+@media (max-width: 769px) {
+  .banner__text-2 .subtitle-2 {
+    font-size: 8px;
+  }
 }
 
 /*---------------------------------------banners end-----------------------------------*/
@@ -860,6 +920,23 @@ main {
   .trouvaille-cards .slider__arrow-right {
     top: 36%;
     right: 10%;
+  }
+}
+@media (max-width: 769px) {
+  .trouvaille-cards {
+    grid-template-columns: repeat(2, 294px);
+    grid-gap: 10px;
+  }
+  .trouvaille-cards .cards__item--tr-1 {
+    display: block;
+  }
+  .trouvaille-cards .slider__arrow-left {
+    top: 48%;
+    left: 21%;
+  }
+  .trouvaille-cards .slider__arrow-right {
+    top: 48%;
+    right: 21%;
   }
 }
 
@@ -967,7 +1044,7 @@ main {
 }
 
 .insta-shares {
-  width: 1440px;
+  width: 100%;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(6, 406px);
@@ -1057,17 +1134,35 @@ main {
 .subscription__content-left {
   padding: 37px 0 39px 0px;
 }
+@media (max-width: 769px) {
+  .subscription__content-left {
+    width: 40%;
+  }
+}
 
 .subscription__title {
   font-size: 44px;
   font-weight: 600;
   margin-bottom: 11px;
 }
+@media (max-width: 769px) {
+  .subscription__title {
+    font-size: 30px;
+  }
+}
 
 .subscription__subtitle {
   font-size: 16px;
   line-height: 160%;
   font-weight: 400;
+}
+@media (max-width: 769px) {
+  .subscription__subtitle {
+    font-size: 14px;
+  }
+  .subscription__subtitle br {
+    display: none;
+  }
 }
 
 .subscription__content-right {
@@ -1118,6 +1213,11 @@ main {
   font-size: 18px;
   font-weight: 400;
 }
+@media (max-width: 769px) {
+  .input__email {
+    width: 210px;
+  }
+}
 
 .subscription__button {
   margin-left: 115px;
@@ -1125,6 +1225,11 @@ main {
 @media (max-width: 1025px) {
   .subscription__button {
     margin-left: 55px;
+  }
+}
+@media (max-width: 769px) {
+  .subscription__button {
+    margin-left: 33px;
   }
 }
 .subscription__button a {
@@ -1145,6 +1250,11 @@ main {
 @media (max-width: 1025px) {
   .subscription__button a {
     padding: 16px 70px;
+  }
+}
+@media (max-width: 769px) {
+  .subscription__button a {
+    padding: 15px 40px;
   }
 }
 
@@ -1189,6 +1299,11 @@ footer {
   font-weight: 400;
   margin: 0 44px;
   color: #fff;
+}
+@media (max-width: 769px) {
+  .footer__nav-item {
+    margin: 0 20px;
+  }
 }
 
 .social__items {

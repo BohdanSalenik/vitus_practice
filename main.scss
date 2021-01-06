@@ -254,7 +254,7 @@ header {
 
 .header__mobile-nav {
     overflow: auto;
-    position: fixed;
+    position: absolute;
     right: 0;
     opacity: 0;
     top: 38px;
@@ -271,6 +271,7 @@ header {
 
 .header__mobile-nav.active {
     opacity: 1;
+    position: fixed;
 }
 
 .header__mobile-nav__list {
@@ -409,6 +410,16 @@ main {
 
         .cards__item--6 {
             display: none;
+        }
+    }
+
+    @include brakepoint($tablet-bp) {
+        justify-content: center;
+        grid-template-columns: repeat(3, 200px);
+        grid-gap: 8px;
+
+        .cards__item--6 {
+            display: block;
         }
     }
 }
@@ -598,6 +609,10 @@ main {
     img {
         margin-right: 20px;
     }
+
+    @include brakepoint($tablet-bp) {
+        font-size: 14px;
+    }
 }
 
 /*----------------------------------benefits-strip end-----------------------------------*/
@@ -613,6 +628,10 @@ main {
 
     @include brakepoint($laptop-bp) {
         margin-bottom: 122px;
+    }
+
+    @include brakepoint($tablet-bp) {
+        grid-column-gap: 10px;
     }
 }
 
@@ -656,6 +675,10 @@ main {
     display: grid;
     grid-template-rows: 49.3% 49.3%;
     grid-row-gap: 14px;
+
+    @include brakepoint($tablet-bp) {
+        grid-row-gap: 7px;
+    }
 }
 
 
@@ -669,6 +692,10 @@ main {
         padding: 17px 38px;
         height: 129px;
         margin-top: -129px;
+    }
+
+    @include brakepoint($tablet-bp) {
+        padding: 16px 19px;
     }
 
     .subtitle-1 {
@@ -685,6 +712,10 @@ main {
             font-size: 27px;
             margin: 1px 0;
         }
+
+        @include brakepoint($tablet-bp) {
+            font-size: 22px;
+        }
     }
 
     .subtitle-2 {
@@ -696,6 +727,10 @@ main {
             br {
                 display: none;
             }
+        }
+
+        @include brakepoint($tablet-bp) {
+            font-size: 11px;
         }
     }
 }
@@ -710,6 +745,12 @@ main {
         padding: 8px 22px;
         height: 105px;
         margin-top: -105px;
+    }
+
+    @include brakepoint($tablet-bp) {
+        padding: 8px 10px;
+        height: 90px;
+        margin-top: -90px;
     }
 
     .subtitle-1 {
@@ -729,12 +770,20 @@ main {
         @include brakepoint($laptop-bp) {
             margin: 0;
         }
+
+        @include brakepoint($tablet-bp) {
+            font-size: 17px;
+        }
     }
 
     .subtitle-2 {
         font-size: 10px;
         font-weight: 400;
         line-height: 18px;
+
+        @include brakepoint($tablet-bp) {
+            font-size: 8px;
+        }
     }
 }
 
@@ -802,6 +851,25 @@ main {
         .slider__arrow-right {
             top: 36%;
             right: 10%;
+        }
+    }
+
+    @include brakepoint($tablet-bp) {
+        grid-template-columns: repeat(2, 294px);
+        grid-gap: 10px;
+
+        .cards__item--tr-1 {
+            display: block;
+        }
+
+        .slider__arrow-left {
+            top: 48%;
+            left: 21%;
+        }
+
+        .slider__arrow-right {
+            top: 48%;
+            right: 21%;
         }
     }
 }
@@ -911,7 +979,7 @@ main {
 }
 
 .insta-shares {
-    width: 1440px;
+    width: 100%;
     align-self: center;
     display: grid;
     grid-template-columns: repeat(6, 406px);
@@ -989,18 +1057,34 @@ main {
 
 .subscription__content-left {
     padding: 37px 0 39px 0px;
+    
+    @include brakepoint($tablet-bp) {
+        width: 40%;
+    }
 }
 
 .subscription__title {
     font-size: 44px;
     font-weight: 600;
     margin-bottom: 11px;
+
+    @include brakepoint($tablet-bp) {
+        font-size: 30px;
+    }
 }
 
 .subscription__subtitle {
     font-size: 16px;
     line-height: 160%;
     font-weight: 400;
+
+    @include brakepoint($tablet-bp) {
+        br {
+            display: none;
+        }
+
+        font-size: 14px;
+    }
 }
 
 .subscription__content-right {
@@ -1033,6 +1117,10 @@ main {
         font-size: 18px;
         font-weight: 400;
     }
+
+    @include brakepoint($tablet-bp) {
+        width: 210px;
+    }
 }
 
 .subscription__button {
@@ -1040,6 +1128,10 @@ main {
 
     @include brakepoint($laptop-bp) {
         margin-left: 55px;
+    }
+
+    @include brakepoint($tablet-bp) {
+        margin-left: 33px;
     }
 
     a {
@@ -1058,6 +1150,10 @@ main {
 
         @include brakepoint($laptop-bp) {
             padding: 16px 70px;
+        }
+
+        @include brakepoint($tablet-bp) {
+            padding: 15px 40px;
         }
     }
 }
@@ -1092,6 +1188,10 @@ footer {
     font-weight: 400;
     margin: 0 44px;
     color: #fff;
+
+    @include brakepoint($tablet-bp) {
+        margin: 0 20px;
+    }
 }
 
 .social__items {
