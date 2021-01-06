@@ -518,6 +518,7 @@ main {
     @include brakepoint($laptop-bp) {
         grid-template-columns: repeat(5, 200px);
         grid-column-gap: 0px;
+        justify-content: center;
 
         .cards__item--6 {
             display: none;
@@ -540,9 +541,9 @@ main {
         grid-column-gap: 15px;
         grid-row-gap: 30px;
 
-        .slider__arrow-left, .slider__arrow-right {
-            display: none;
-        }
+        //  .slider__arrow-left, .slider__arrow-right {
+        //     display: none;
+        // }
     }
 }
 
@@ -813,7 +814,7 @@ main {
     margin-bottom: 160px;
 
     @include brakepoint($laptop-bp) {
-        margin-bottom: 0px;
+        margin-bottom: 122px;
     }
 
     @include brakepoint($tablet-bp) {
@@ -1233,6 +1234,14 @@ main {
     @include brakepoint($laptop-bp) {
         margin-bottom: 120px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 110px;
+
+        .slider-dot {
+            margin-bottom: 35px;
+        }
+    }
 }
 
 .share-choice__title {
@@ -1333,6 +1342,34 @@ main {
     font-weight: 500;
 }
 
+.leave-review {
+    display: none;
+    width: 100%;
+    padding: 0 16px;
+    text-align: center;
+
+    @include brakepoint($mobile_l-bp) {
+        display: block;
+    }
+}
+
+.leave-review__button {
+    display: none;
+    padding: 16px 0;
+    border: 1px solid $secondary-blue;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    @include brakepoint($mobile_l-bp) {
+        display: block;
+    }
+
+    &:hover {
+        border: 1px solid $button-hover;
+    }
+}
+
 /*------------------------------------share-choice end----------------------------------*/
 
 
@@ -1345,11 +1382,22 @@ main {
     height: 200px;
     background-color: #212121;
     margin-bottom: 160px;
+
+    @include brakepoint($mobile_l-bp) {
+        height: 390px;
+        margin-bottom: 80px;
+    }
 }
 
 .subscription__content {
     display: flex;
     justify-content: space-between;
+
+    @include brakepoint($mobile_l-bp) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
 
 .subscription__content-left {
@@ -1357,6 +1405,13 @@ main {
     
     @include brakepoint($tablet-bp) {
         width: 40%;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 }
 
@@ -1367,6 +1422,11 @@ main {
 
     @include brakepoint($tablet-bp) {
         font-size: 30px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        font-size: 28px;
+        margin-bottom: 16px;
     }
 }
 
@@ -1382,12 +1442,25 @@ main {
 
         font-size: 14px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        text-align: center;
+        line-height: 18px;
+    }
 }
 
 .subscription__content-right {
     display: flex;
     align-items: flex-end;
     padding-bottom: 63px;
+
+    @include brakepoint($mobile_l-bp) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
 }
 
 .input__email {
@@ -1418,6 +1491,17 @@ main {
     @include brakepoint($tablet-bp) {
         width: 210px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 100%;
+    }
+}
+
+.subscription__input {
+    @include brakepoint($mobile_l-bp) {
+        width: 100%;
+        margin-bottom: 64px;
+    }
 }
 
 .subscription__button {
@@ -1429,6 +1513,11 @@ main {
 
     @include brakepoint($tablet-bp) {
         margin-left: 33px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 100%;
+        margin-left: 0;
     }
 
     a {
@@ -1452,6 +1541,12 @@ main {
         @include brakepoint($tablet-bp) {
             padding: 15px 40px;
         }
+
+        @include brakepoint($mobile_l-bp) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
     }
 }
 
@@ -1473,10 +1568,20 @@ footer {
 
 .footer__logo {
     margin: 60px 0;
+
+    @include brakepoint($mobile_l-bp) {
+        margin: 35px 0 32px 0;
+        width: 118px;
+    }
 }
 
 .footer__nav {
     display: flex;
+
+    @include brakepoint($mobile_l-bp) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer__nav-item {
@@ -1489,11 +1594,19 @@ footer {
     @include brakepoint($tablet-bp) {
         margin: 0 20px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        margin: 0 0 32px 0;
+    }
 }
 
 .social__items {
     display: flex;
     margin: 63px 0;
+
+    @include brakepoint($mobile_l-bp) {
+        margin: 0 0 40px 0;
+    }
 }
 
 .social__item {
@@ -1507,5 +1620,9 @@ footer {
         img {
             transform: scale(1.2);
         }
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        margin: 0 20px;
     }
 }
