@@ -90,6 +90,10 @@ a {
     @include brakepoint($laptop-bp) {
         display: block;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        display: none;
+    }
 }
 
 /*------------------------------------top-bar end---------------------------------------*/
@@ -108,6 +112,10 @@ header {
     @include brakepoint($laptop-bp) {
         height: 64px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        height: 48px;
+    }
 }
 
 .header {
@@ -124,9 +132,23 @@ header {
     align-items: center;
     display: flex;
 
+    .main-logo-mobile {
+        display: none;
+    }
+
     a {
         @include brakepoint($laptop-bp) {
             width: 110px;
+        }
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        .main-logo-mobile {
+            display: block;
+        }
+
+        .main-logo-laptop {
+            display: none;
         }
     }
 }
@@ -229,6 +251,16 @@ header {
         bottom: 0;
         right: 0;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 25px;
+        height: 20px;
+        margin-top: 4px;
+
+        span {
+            bottom: 8px;
+        }
+    }
 }
 
 .header__burger.active {
@@ -267,6 +299,13 @@ header {
     line-height: 1;
     box-shadow: 0px 1px 7px rgba(168, 172, 176, 0.19);
     transition: opacity .4s linear;
+
+    @include brakepoint($mobile_l-bp) {
+        height: 421px;
+        width: 210px;
+        font-size: 20px;
+        padding: 90px 26px 84px 0;
+    }
 }
 
 .header__mobile-nav.active {
@@ -278,6 +317,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    
+    @include brakepoint($mobile_l-bp) {
+        height: 245px;
+        overflow: auto;
+    }
 }
 
 .header__mobile-nav__link {
@@ -286,6 +330,14 @@ header {
 
     img {
         margin-left: 60px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 30px;
+
+        img {
+            margin-left: 22px;
+        }
     }
 }
 
@@ -308,6 +360,13 @@ header {
         background-color: $secondary-blue;
         right: -6px;
         top: -5px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        img {
+            width: 28px;
+            height: 25px;
+        }
     }
 }
 
@@ -338,6 +397,30 @@ main {
         background-image: url("/img/main-banner-bg-tablet.png");
         padding: 307px 0 153px 0;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        height: 559px;
+        background-image: url("/img/main-banner-bg-mobile.png");
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 0 0;
+
+        .container {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.main-banner__content {
+
+    @include brakepoint($mobile_l-bp) {
+        padding: 40px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
 
 .main-banner__preview {
@@ -345,6 +428,11 @@ main {
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 10px;
+
+    @include brakepoint($mobile_l-bp) {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
 }
 
 .main-banner__title {
@@ -356,9 +444,14 @@ main {
     @include brakepoint($laptop-bp) {
         margin-bottom: 53px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
 }
 
-.main-manner__button {
+.main-banner__button {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -371,6 +464,12 @@ main {
         color: white;
         box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
     }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
 }
 
 /*-------------------------------------main-banner end-----------------------------*/
@@ -380,11 +479,23 @@ main {
 
 .cards {
     display: flex;
-    justify-content: center;
     padding: 30px 0 100px 0;
+    flex-direction: column;
+    align-items: center;
 
     @include brakepoint($laptop-bp) {
-        padding: 30px 0 66px 0;
+        padding: 60px 0 66px 0;
+    }
+}
+
+.mobile-cards__title {
+    display: none;
+    font-size: 28px;
+    font-weight: 600;
+
+    @include brakepoint($mobile_l-bp) {
+        display: block;
+        margin-bottom: 30px;
     }
 }
 
@@ -420,6 +531,17 @@ main {
 
         .cards__item--6 {
             display: block;
+        }
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: 289px;
+        grid-column-gap: 15px;
+        grid-row-gap: 30px;
+
+        .slider__arrow-left, .slider__arrow-right {
+            display: none;
         }
     }
 }
@@ -462,11 +584,20 @@ main {
             }
         }
     }
+
+    @include brakepoint($mobile_l-bp) {
+        padding: 0;
+        height: 289px;
+    }
     
 }
 
 .card__photo {
     margin-bottom: 16px;
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 6px;
+    }
 }
 
 .card__title {
@@ -518,6 +649,11 @@ main {
             transform: scale(1.1);
         }
     }
+
+    @include brakepoint($mobile_l-bp) {
+        top: 13px;
+        right: 13px;
+    }
 }
 
 .card-selected-white {
@@ -550,6 +686,18 @@ main {
     @include brakepoint($laptop-bp) {
         opacity: 1;
         background-color: #97979B;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 40px;
+        height: 40px;
+        bottom: 89px;
+        right: 9px;
+        background-color: #97979baf;
+
+        img {
+            transform: scale(0.8);
+        }
     }
 
 }
@@ -592,12 +740,23 @@ main {
     @include brakepoint($laptop-bp) {
         margin-bottom: 80px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        height: 309px;
+    }
 }
 
 .benefits-strip__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include brakepoint($mobile_l-bp) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
 }
 
 .secure, .free-shipping, .warranty {
@@ -612,6 +771,16 @@ main {
 
     @include brakepoint($tablet-bp) {
         font-size: 14px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        font-weight: 400;
+        flex-direction: column;
+
+        img {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
     }
 }
 
@@ -633,6 +802,11 @@ main {
     @include brakepoint($tablet-bp) {
         grid-column-gap: 10px;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
 }
 
 .banner__1 {
@@ -642,6 +816,10 @@ main {
     width: 100%;
     height: 0;
     padding-top: 150%;
+
+    @include brakepoint($mobile_l-bp) {
+        display: none;
+    }
 }
 
 .banner__2 {
@@ -651,6 +829,10 @@ main {
     width: 100%;
     height: 0;
     padding-top: 98%;
+
+    @include brakepoint($mobile_l-bp) {
+        display: none;
+    }
 }
 
 .banner__3-1 {
@@ -678,6 +860,10 @@ main {
 
     @include brakepoint($tablet-bp) {
         grid-row-gap: 7px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        grid-row-gap: 16px;
     }
 }
 
@@ -774,6 +960,10 @@ main {
         @include brakepoint($tablet-bp) {
             font-size: 17px;
         }
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 24px;
+        }
     }
 
     .subtitle-2 {
@@ -784,6 +974,14 @@ main {
         @include brakepoint($tablet-bp) {
             font-size: 8px;
         }
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 10px;
+        }
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        padding: 8px 24px;
     }
 }
 
