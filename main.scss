@@ -505,16 +505,6 @@ main {
     grid-column-gap: 8px;
     position: relative;
 
-    @include brakepoint($laptop_l-bp) {
-        .slider__arrow-left {
-            left: 0;
-        }
-
-        .slider__arrow-right {
-            right: 0;
-        }
-    }
-
     @include brakepoint($laptop-bp) {
         grid-template-columns: repeat(5, 200px);
         grid-column-gap: 0px;
@@ -540,10 +530,12 @@ main {
         grid-template-rows: 289px;
         grid-column-gap: 15px;
         grid-row-gap: 30px;
+    }
 
-        //  .slider__arrow-left, .slider__arrow-right {
-        //     display: none;
-        // }
+    @include brakepoint($mobile_s-bp) {
+        grid-template-columns: repeat(2, 145px);
+        grid-template-rows: 275px;
+        grid-column-gap: 9px;
     }
 }
 
@@ -590,7 +582,6 @@ main {
         padding: 0;
         height: 289px;
     }
-    
 }
 
 .card__photo {
@@ -701,6 +692,10 @@ main {
         }
     }
 
+    @include brakepoint($mobile_s-bp) {
+        bottom: 108px;
+    }
+
 }
 
 .slider__arrow-left {
@@ -708,11 +703,23 @@ main {
     top: 33%;
     left: -21px;
 
-    @include brakepoint($laptop-bp) {
-        top: 45%;
-        left: 0px;
+    @include brakepoint($laptop_l-bp) {
+        left: 0;
     }
 
+    @include brakepoint($laptop-bp) {
+        top: 45%;
+        left: 10%;
+    }
+
+    @include brakepoint($tablet-bp) {
+        left: 21%;
+        top: 48%;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        display: none;
+    }
 }
 
 .slider__arrow-right {
@@ -720,9 +727,22 @@ main {
     top: 33%;
     right: -21px;
 
+    @include brakepoint($laptop_l-bp) {
+        right: 0;
+    }
+
     @include brakepoint($laptop-bp) {
         top: 45%;
-        right: 0px;
+        right: 10%;
+    }
+
+    @include brakepoint($tablet-bp) {
+        right: 21%;
+        top: 48%;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        display: none;
     }
 }
 
@@ -824,6 +844,7 @@ main {
     @include brakepoint($mobile_l-bp) {
         grid-template-columns: 90%;
         justify-content: center;
+        margin-bottom: 30px;
     }
 }
 
@@ -995,6 +1016,10 @@ main {
 
         @include brakepoint($mobile_l-bp) {
             font-size: 10px;
+        }
+
+        @include brakepoint($mobile_s-bp) {
+            font-size: 8px;
         }
     }
 
@@ -1254,6 +1279,10 @@ main {
     @include brakepoint($mobile_l-bp) {
         font-size: 28px;
         margin-bottom: 10px;
+    }
+
+    @include brakepoint($mobile_s-bp) {
+        font-size: 23px;
     }
 }
 
