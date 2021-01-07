@@ -54,6 +54,10 @@ a:active {
   background-color: #58585A;
 }
 
+.top-bar.active {
+  display: none;
+}
+
 .top-bar__text {
   text-align: center;
   font-size: 12px;
