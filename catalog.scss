@@ -64,6 +64,7 @@
     display: flex;
     justify-content: center;
     margin-top: 48px;
+    margin-bottom: 160px;
 }
 
 .product-cards__title {
@@ -74,8 +75,10 @@
 
 .product-cards__content {
     display: flex;
+    justify-content: space-between;
+
     .navigation {
-        width: 210px;
+        width: 17%;
         margin-top: 88px;
     }
 }
@@ -128,5 +131,230 @@
     font-weight: 500;
     margin-bottom: 8px;
 }
+
+
+/*--------------------------------------------product-card__view-1-----------------------------------*/
+
+.product-card {
+    width: 70%;
+}
+
+.product-card__view-1.dis_n {
+    display: none;
+}
+
+.product-card__view-1.dis_b {
+    display: block;
+}
+
+.product-card__view-2.dis_n {
+    display: none;
+}
+
+.product-card__view-2.dis_b {
+    display: block;
+
+    .list-bulleted {
+        opacity: 1;
+    }
+
+    .list-grid {
+        opacity: 0.5;
+    }
+}
+
+.trouvaille-cards {
+    grid-template-columns: repeat(3, 290px);
+    grid-column-gap: 0px;
+    grid-template-rows: 475px;
+    grid-row-gap: 50px;
+}
+
+.sorting {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7E7E81;
+    margin-bottom: 30px;
+    padding: 0 16px;
+}
+
+.sorting-select {
+    display: flex;
+    align-items: center;
+
+    img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.sorting-select__text {
+    margin-right: 8px;
+}
+
+.view-select {
+    display: flex;
+
+    .list-bulleted {
+        opacity: 0.5;
+        margin-left: 12px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .list-grid {
+        margin-left: 28px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.showing-number {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7E7E81;
+    padding: 0 16px;
+    margin-top: 80px;
+}
+
+
+/*--------------------------------------------product-card__view-2-----------------------------------*/
+.product-card__view-2 {
+    display: none;
+}
+
+.product-card__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 103px;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all .3s linear;
+
+    &:hover {
+        background-color: $card__hover-bg;
+
+        .card__basket-v2 {
+            display: flex;
+        }
+    }
+}
+
+.left-block {
+    display: flex;
+    align-items: center;
+
+    .product__photo {
+        margin-right: 54px;
+    }
+
+    .product__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: flex-end;
+
+            .actual {
+                font-size: 18px;
+                margin-right: 22px;
+            }
+
+            .old {
+                font-size: 14px;
+                color: #97979B;
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+.right-block {
+    display: flex;
+    align-items: center;
+}
+
+.card__basket-v2 {
+    height: 52px;
+    width: 52px;
+    background-color: $secondary-blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 0 70px;
+    display: none;
+
+    img {
+        transform: scale(1.4);
+        transition: transform .2s linear;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.5);
+        }
+    }
+}
+
+
+
+
+
+/*-----------------------------------------main-banner-second-------------------------------*/
+.main-banner__second {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 48px 0;
+    background-image: url("/img/main-banner-second-bg.png");
+    background-size: cover;
+    height: 278px;
+
+    .main-banner__button {
+        display: block;
+        width: 260px;
+    }
+
+    .main-banner__title {
+        margin-bottom: 30px;
+    }
+
+    @include brakepoint($laptop-bp) {
+        height: 662px;
+        background-image: url("/img/main-banner-bg-tablet.png");
+        padding: 307px 0 153px 0;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        height: 559px;
+        background-image: url("/img/main-banner-bg-mobile.png");
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 0 0;
+
+        .container {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
 
 

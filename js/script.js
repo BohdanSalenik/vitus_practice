@@ -30,4 +30,19 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function() {
+    $('.list-bulleted').click(function(event){
+        $('.product-card__view-1').toggleClass('dis_n');
+        $('.product-card__view-1').removeClass('dis_b');
+        $('.product-card__view-2').toggleClass('dis_b');
+        $('.product-card__view-2').removeClass('dis_n');
+    })
+    $('.list-grid').click(function(event){
+        $('.product-card__view-1').toggleClass('dis_b');
+        $('.product-card__view-1').removeClass('dis_n');
+        $('.product-card__view-2').toggleClass('dis_n');
+        $('.product-card__view-2').removeClass('dis_b');
+    })
+})
+
 
