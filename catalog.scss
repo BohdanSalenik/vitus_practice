@@ -12,6 +12,12 @@
 
 .main-banner {
     background-image: url("/img/catalog-main-banner-bg.png");
+
+    @include brakepoint($laptop-bp) {
+        background-image: url("/img/catalog-main-banner-tablet.png");
+        height: 278px;
+        padding: 0;
+    }
 }
 
 .main-banner__button {
@@ -27,6 +33,10 @@
 
     .main-banner__title {
         margin-bottom: 0;
+
+        @include brakepoint($laptop-bp) {
+            width: 400px;
+        }
     }
 }
 
@@ -168,6 +178,27 @@
     grid-column-gap: 0px;
     grid-template-rows: 475px;
     grid-row-gap: 50px;
+
+    @include brakepoint($laptop-bp) {
+        grid-template-columns: repeat(3, 231px);
+        grid-column-gap: 0px;
+        grid-template-rows: 394px;
+        grid-row-gap: 15px;
+
+        .card-basket {
+            bottom: 38px;
+        }
+
+        .card__item--tr {
+            height: 405px;
+
+            .card__photo {
+                img {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
 }
 
 .sorting {
@@ -338,9 +369,9 @@
     }
 
     @include brakepoint($laptop-bp) {
-        height: 662px;
-        background-image: url("/img/main-banner-bg-tablet.png");
-        padding: 307px 0 153px 0;
+        height: 388px;
+        background-image: url("/img/main-banner-second-bg-tablet.png");
+        padding: 0;
     }
 
     @include brakepoint($mobile_l-bp) {
@@ -364,6 +395,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 160px;
+
+    .container {
+        width: 100%;
+    }
 }
 
 .recently-viewed__title {
@@ -419,6 +454,15 @@
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+.recently-viewed__item {
+    position: relative;
+
+    .card__selected {
+        top: 22px;
+        right: 22px;
     }
 }
 
