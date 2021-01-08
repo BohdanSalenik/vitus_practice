@@ -84,6 +84,12 @@
   margin-top: 48px;
   margin-bottom: 160px;
 }
+@media (max-width: 1025px) {
+  .product-cards .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 
 .product-cards__title {
   font-size: 44px;
@@ -181,27 +187,13 @@
 }
 
 .trouvaille-cards {
-  grid-template-columns: repeat(3, 290px);
+  grid-template-columns: repeat(3, 33.3%);
   grid-column-gap: 0px;
-  grid-template-rows: 475px;
+  grid-template-rows: auto;
   grid-row-gap: 50px;
 }
-@media (max-width: 1025px) {
-  .trouvaille-cards {
-    grid-template-columns: repeat(3, 231px);
-    grid-column-gap: 0px;
-    grid-template-rows: 394px;
-    grid-row-gap: 15px;
-  }
-  .trouvaille-cards .card-basket {
-    bottom: 38px;
-  }
-  .trouvaille-cards .card__item--tr {
-    height: 405px;
-  }
-  .trouvaille-cards .card__item--tr .card__photo img {
-    margin-bottom: 16px;
-  }
+.trouvaille-cards .cards__item--tr {
+  height: auto;
 }
 
 .sorting {
@@ -433,9 +425,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 160px;
-}
-.recently-viewed .container {
-  width: 100%;
 }
 
 .recently-viewed__title {

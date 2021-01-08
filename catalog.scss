@@ -75,6 +75,13 @@
     justify-content: center;
     margin-top: 48px;
     margin-bottom: 160px;
+
+    @include brakepoint($laptop-bp) {
+        .container {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
 }
 
 .product-cards__title {
@@ -174,31 +181,35 @@
 }
 
 .trouvaille-cards {
-    grid-template-columns: repeat(3, 290px);
+    grid-template-columns: repeat(3, 33.3%);
     grid-column-gap: 0px;
-    grid-template-rows: 475px;
+    grid-template-rows: auto;
     grid-row-gap: 50px;
 
-    @include brakepoint($laptop-bp) {
-        grid-template-columns: repeat(3, 231px);
-        grid-column-gap: 0px;
-        grid-template-rows: 394px;
-        grid-row-gap: 15px;
-
-        .card-basket {
-            bottom: 38px;
-        }
-
-        .card__item--tr {
-            height: 405px;
-
-            .card__photo {
-                img {
-                    margin-bottom: 16px;
-                }
-            }
-        }
+    .cards__item--tr {
+        height: auto;
     }
+
+    // @include brakepoint($laptop-bp) {
+    //     grid-template-columns: repeat(3, 231px);
+    //     grid-column-gap: 0px;
+    //     grid-template-rows: 394px;
+    //     grid-row-gap: 15px;
+
+    //     .card-basket {
+    //         bottom: 38px;
+    //     }
+
+    //     .card__item--tr {
+    //         height: 405px;
+
+    //         .card__photo {
+    //             img {
+    //                 margin-bottom: 16px;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 .sorting {
@@ -395,10 +406,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 160px;
-
-    .container {
-        width: 100%;
-    }
 }
 
 .recently-viewed__title {
