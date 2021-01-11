@@ -130,6 +130,7 @@
   .product-cards {
     position: relative;
     margin-bottom: 80px;
+    margin-top: 32px;
   }
   .product-cards .open-all-cards__mobile {
     position: absolute;
@@ -223,6 +224,98 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
+}
+
+/*----------------------------------navigation__mobile----------------------------------------------*/
+.category__button {
+  display: none;
+  margin-bottom: 32px;
+}
+.category__button a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #7A5CE6;
+  font-size: 14px;
+  font-weight: 600;
+}
+.category__button a:hover {
+  color: #fff;
+}
+@media (max-width: 668px) {
+  .category__button {
+    display: block;
+  }
+}
+
+.category__mobile {
+  position: relative;
+  display: none;
+  height: 86.5625%;
+  width: 100%;
+  background-color: #2e2e2e;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 86px;
+  padding: 23px 22px 16px 16px;
+  overflow: auto;
+}
+.category__mobile .button__apply {
+  position: fixed;
+  width: 90%;
+  bottom: 19px;
+}
+.category__mobile .button__apply a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #7A5CE6;
+  font-size: 14px;
+  font-weight: 600;
+}
+.category__mobile .button__apply a:hover {
+  color: #fff;
+}
+.category__mobile .navigation__item-title {
+  font-size: 20px;
+}
+.category__mobile .navigation {
+  height: 100%;
+  overflow: auto;
+}
+.category__mobile .navigation .navigation__item-preview-1, .category__mobile .navigation .navigation__item-preview-2, .category__mobile .navigation .navigation__item-preview-3, .category__mobile .navigation .navigation__item-preview-4, .category__mobile .navigation .navigation__item-preview-5 {
+  margin-bottom: 33px;
+}
+.category__mobile .navigation .navigation__item-list {
+  padding: 17px 0 20px 0;
+}
+.category__mobile .navigation .navigation__item-link {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.category__mobile.active {
+  display: block;
+}
+
+.category__mobile-title {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.close__category__mobile {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+}
+.close__category__mobile img:hover {
+  cursor: pointer;
 }
 
 /*--------------------------------------------product-card__view-1-----------------------------------*/

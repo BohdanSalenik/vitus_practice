@@ -45,4 +45,15 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function() {
+    $('.category__button').click(function(event){
+        $('.category__mobile').toggleClass('active');
+        $('body').toggleClass('lock');
+    })
+    $('.close__category__mobile').click(function(event){
+        $('.category__mobile').removeClass('active');
+        $('body').removeClass('lock');
+    })
+})
+
 

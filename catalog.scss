@@ -116,6 +116,7 @@
     @include brakepoint($mobile_l-bp) {
         position: relative;
         margin-bottom: 80px;
+        margin-top: 32px;
 
         .open-all-cards__mobile {
             position: absolute;
@@ -203,6 +204,110 @@
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
+}
+
+/*----------------------------------navigation__mobile----------------------------------------------*/
+
+.category__button {
+    display: none;
+    margin-bottom: 32px;
+    a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 16px 0;
+        background-color: $secondary-blue;
+        font-size: 14px;
+        font-weight: 600;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        display: block;
+    }
+}
+
+.category__mobile {
+    position: relative;
+    display: none;
+    height: (100% - 13.4375%);
+    width: 100%;
+    background-color: $body__bg-color;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 86px;
+    padding: 23px 22px 16px 16px;
+    overflow: auto;
+
+    .button__apply {
+        position: fixed;
+        width: 90%;
+        bottom: 19px;
+        
+        a {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 16px 0;
+            background-color: $secondary-blue;
+            font-size: 14px;
+            font-weight: 600;
+    
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .navigation__item-title {
+        font-size: 20px;
+    }
+
+    .navigation {
+        height: 100%;
+        overflow: auto;
+
+        .navigation__item-preview-1, .navigation__item-preview-2, .navigation__item-preview-3, .navigation__item-preview-4, .navigation__item-preview-5 {
+            margin-bottom: 33px;
+        }
+
+        .navigation__item-list {
+            padding: 17px 0 20px 0;
+        }
+
+        .navigation__item-link {
+            font-size: 19px;
+            font-weight: 400;
+        }
+    }
+}
+
+.category__mobile.active {
+    display: block;
+}
+
+.category__mobile-title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+.close__category__mobile {
+    position: absolute;
+    top: 27px;
+    right: 20px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 
