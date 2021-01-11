@@ -327,6 +327,7 @@ header {
           box-shadow: 0px 1px 7px rgba(168, 172, 176, 0.19);
   -webkit-transition: opacity .4s linear;
   transition: opacity .4s linear;
+  z-index: -3;
 }
 @media (max-width: 668px) {
   .header__mobile-nav {
@@ -340,6 +341,7 @@ header {
 .header__mobile-nav.active {
   opacity: 1;
   position: fixed;
+  z-index: 2;
 }
 
 .header__mobile-nav__list {
