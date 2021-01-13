@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/main.css">
+    <link rel="stylesheet" href="/catalog.css">
     <link rel="stylesheet" href="/product.css">
     <link rel="stylesheet" href="reset.css">
     <title>Catalog</title>
@@ -117,6 +118,49 @@
         <!-- -------------------- main -------------------------- -->
         <main> 
 
+            <!-- ---------------- breadcrumbs ------------------- -->
+                <div class="breadcrumbs">
+                    <div class="container breadcrumbs__content">
+                        <div class="breadcrumbs__links">
+                            <a class="breadcrumbs__link" href="/index.html">HOME</a>
+                        </div>
+                        <span></span>
+                        <div class="breadcrumbs__links">
+                            <a class="breadcrumbs__link--active" href="/catalog.html">PRODUCT</a>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- ------------main-product-card------------------ -->
+
+            <div class="main-product-card">
+                <div class="container main-product-card__content">
+                    <div class="main-product-card__left">
+                        <div class="min-product__photo">
+                            <div class="min-product__photo-item active">
+                                <img class="min-photo" src="/img/main-product-photo.png" alt="">
+                            </div>
+                            <div class="min-product__photo-item">
+                                <img class="min-photo" src="/img/catalog-view-2/product-2-v2.png" alt="">
+                            </div>
+                            <div class="min-product__photo-item">
+                                <img class="min-photo" src="/img/catalog-view-2/product-4-v2.png" alt="">
+                            </div>
+                            <div class="min-product__photo-item">
+                                <img class="min-photo" src="/img/main-product-photo.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="max-product__photo">
+                            <img id="max-photo" src="/img/main-product-photo.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="main-product-card__right">
+                        
+                    </div>
+                </div>
+            </div>
 
         </main>
         <!-- -------------------footer--------------------- -->
@@ -170,5 +214,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/goods_slider.js"></script>
 </body>
 </html>
