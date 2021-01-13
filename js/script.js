@@ -56,4 +56,16 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function() {
+    $('.close-answer-1').click(function(event){
+        $('.main-questions-1, .main-answer-1').toggleClass('active');
+    })
+    $('.close-answer-2').click(function(event){
+        $('.main-questions-2, .main-answer-2').toggleClass('active');
+    })
+    $('.close-answer-3').click(function(event){
+        $('.main-questions-3, .main-answer-3').toggleClass('active');
+    })
+})
+
 

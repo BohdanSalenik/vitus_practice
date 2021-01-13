@@ -182,11 +182,205 @@
                 width: 100%;
                 padding: 16px 0;
                 background-color: $secondary-blue;
+                transition: background-color .2s linear;
 
                 &:hover {
-                    color: #fff;
+                    background-color: $button-hover;
+                    color: white;
+                    box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
                 }
             }
         }
     }
 }
+
+/*-----------------------------------sale----------------------------*/
+
+.sale {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 160px;
+
+    .sale__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.sale__content {
+
+    .sale__title {
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+
+    .sale__items {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+
+        .slider__arrow-left {
+            position: inherit;
+        }
+
+        .slider__arrow-right {
+            position: inherit;
+        }
+
+        .plus-icon {
+            font-size: 30px;
+            line-height: 1;
+        }
+    }
+}
+
+.sale__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sale__item-title {
+        font-size: 26px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .sale__item-price {
+        display: flex;
+        align-items: center;
+
+        .old-price {
+            font-size: 24px;
+            font-weight: 300;
+            color: #97979B;
+            text-decoration: line-through;
+            margin-right: 16px;
+        }
+
+        .new-price {
+            font-size: 32px;
+        }
+    }
+}
+
+.total-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+
+    .total-price__title {
+        font-size: 32px;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .total-price__price {
+        font-size: 44px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 32px;
+    }
+
+    .button__buy {
+
+        .buy-btn {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            width: 100%;
+            padding: 16px 0;
+            background-color: $secondary-blue;
+            transition: background-color .2s linear;
+
+            &:hover {
+                background-color: $button-hover;
+                color: white;
+                box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+/*----------------------------------general-questions-----------------------------*/
+
+.general-questions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 160px;
+}
+
+.general-questions__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.general-questions__title {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 70px;
+}
+
+.general-questions__items {
+    width: 78%;
+}
+
+.main-questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 25px 0;
+    border-bottom: 1px solid #97979B;
+    transition: all .2s linear;
+
+    p {
+        font-size: 26px;
+        font-weight: 400;
+        color: #97979B;
+        line-height: 1;
+    }
+
+    img {
+        transition: all .2s linear;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.main-questions.active {
+    border-bottom: none;
+    transition: all .2s linear;
+    
+    img {
+        transform: rotate(45deg);
+    }
+}
+
+.main-answer {
+    display: none;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #F1F2F3;
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1; 
+        color: #F1F2F3;
+    }
+}
+
+.main-answer.active {
+    display: block;
+}
+
+
+
