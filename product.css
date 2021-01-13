@@ -416,3 +416,190 @@
 .main-answer.active {
   display: block;
 }
+
+.leave-review__button {
+  display: block;
+  border: 1px solid #7A5CE6;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 60px;
+}
+.leave-review__button .leave-review__btn {
+  padding: 16px 70px;
+}
+
+/*------------------------------------------reviews---------------------------------------------*/
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 120px;
+}
+
+.reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__items {
+  width: 78%;
+}
+.reviews__items .reviews__items-title {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.reviews__item {
+  border-bottom: 1px solid #F1F2F3;
+  margin-top: 32px;
+  padding-bottom: 15px;
+}
+.reviews__item .author__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.reviews__item .author__name img {
+  margin-right: 10px;
+}
+.reviews__item .stars__rate img {
+  width: 15px;
+  height: 15px;
+}
+.reviews__item .stars__rate p {
+  font-size: 14px;
+}
+.reviews__item .main-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 12px;
+}
+.reviews__item .main-message p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 160%;
+  color: #F1F2F3;
+}
+.reviews__item .main-message a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #7A5CE6;
+  text-decoration: underline;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.reviews__item .main-message a:hover {
+  color: #997DFF;
+}
+.reviews__item .authors__product-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 0 0;
+}
+.reviews__item .authors__product-photo img {
+  width: 100px;
+  height: 100px;
+}
+
+.reviews__pagination {
+  width: 35.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 35px;
+}
+.reviews__pagination .prew-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.reviews__pagination .prew-arrow img {
+  margin-right: 15px;
+}
+.reviews__pagination .prew-arrow p {
+  font-size: 16px;
+}
+.reviews__pagination .prew-arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.reviews__pagination .next-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.reviews__pagination .next-arrow img {
+  margin-left: 15px;
+}
+.reviews__pagination .next-arrow p {
+  font-size: 16px;
+}
+.reviews__pagination .next-arrow:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.pagination-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pagination-number .pagination-number__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 5px;
+}
+.pagination-number .pagination-number__item:hover {
+  cursor: pointer;
+}
+.pagination-number .pagination-number__item.active {
+  background-color: #514388FF;
+}
