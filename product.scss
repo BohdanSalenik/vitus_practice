@@ -275,6 +275,11 @@
         font-size: 40px;
         font-weight: 400;
         margin-bottom: 60px;
+
+        @include brakepoint($tablet-bp) {
+            font-size: 26px;
+            margin-bottom: 32px;
+        }
     }
 
     .sale__items {
@@ -388,10 +393,19 @@
     font-weight: 600;
     line-height: 1;
     margin-bottom: 70px;
+
+    @include brakepoint($tablet-bp) {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
 }
 
 .general-questions__items {
     width: 78%;
+
+    @include brakepoint($tablet-bp) {
+        width: 95%;
+    }
 }
 
 .main-questions {
@@ -436,11 +450,45 @@
         font-weight: 400;
         line-height: 1; 
         color: #F1F2F3;
+
+        @include brakepoint($tablet-bp) {
+            line-height: 28px;
+        }
     }
 }
 
 .main-answer.active {
     display: block;
+}
+
+/*----------------------------------share-choice-----------------------------*/
+
+.share-choice__title {
+    @include brakepoint($tablet-bp) {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+}
+
+.share-hashtag {
+    @include brakepoint($tablet-bp) {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+.insta-shares {
+    @include brakepoint($tablet-bp) {
+        grid-template-columns: repeat(6, 340px);
+        grid-template-rows: 340px;
+    }
+}
+
+.slider-dot {
+    @include brakepoint($tablet-bp) {
+        display: flex;
+        margin-bottom: 30px;
+    }
 }
 
 .leave-review__button {
@@ -451,8 +499,19 @@
     letter-spacing: 2px;
     margin-top: 60px;
 
+    @include brakepoint($tablet-bp) {
+        width: 95%;
+        margin-top: 0;
+        text-align: center;
+    }
+
     .leave-review__btn {
         padding: 16px 70px;
+
+        @include brakepoint($tablet-bp) {
+            width: 100%;
+            padding: 16px 0;
+        }
     }
 }
 
@@ -462,6 +521,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 120px;
+
+    @include brakepoint($tablet-bp) {
+        margin-bottom: 50px;
+    }
 }
 
 .reviews__content {
@@ -473,11 +536,20 @@
 .reviews__items {
     width: 78%;
 
+    @include brakepoint($tablet-bp) {
+        width: 97%;
+    }
+
     .reviews__items-title {
         font-size: 26px;
         font-weight: 400;
         line-height: 1;
         margin-bottom: 40px;
+
+        @include brakepoint($tablet-bp) {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
     }
 }
 
@@ -541,6 +613,10 @@
             width: 100px;
             height: 100px;
         }
+
+        @include brakepoint($tablet-bp) {
+            margin: 30px 0 0 0;
+        }
     }
 }
 
@@ -550,6 +626,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 35px;
+
+    @include brakepoint($tablet-bp) {
+        width: 95%;
+    }
 
     .prew-arrow {
         display: flex;
