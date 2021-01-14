@@ -13,6 +13,11 @@
 .main-product-card__content {
     display: flex;
     justify-content: space-between;
+
+    @include brakepoint($tablet-bp) {
+        flex-direction: column;
+        justify-content: none;
+    }
 }
 
 .main-product-card__left {
@@ -21,6 +26,10 @@
     grid-template-columns: 25% 73%;
     grid-template-rows: 485px;
     grid-column-gap: 8px;
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+    }
 
     .min-product__photo {
         display: grid;
@@ -56,9 +65,24 @@
     }
 }
 
+.main-product-card__title-mobile {
+    display: none;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1; 
+    margin-bottom: 15px;
+
+    @include brakepoint($tablet-bp) {
+        display: block;
+    }
+}
 
 .main-product-card__right {
     width: 48.2%;
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+    }
 
     .main-product-card__description {
         margin-bottom: 22px;
@@ -68,6 +92,10 @@
         font-size: 40px;
         font-weight: 400;
         line-height: 1;
+
+        @include brakepoint($laptop-bp) {
+            display: none;
+        }
     }
 
     .main-product-card__price {
@@ -90,6 +118,11 @@
         align-items: flex-end;
         font-size: 16px;
 
+        @include brakepoint($tablet-bp) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .stars__rate {
             img {
                 width: 24px;
@@ -101,20 +134,41 @@
                 margin-top: 1px;
             }
         }
+
+        .read-reviews {
+            @include brakepoint($tablet-bp) {
+                margin-top: 10px;
+            }
+        }
     }
 
     .main-product-card__footer {
         display: flex;
         margin-top: 32px;
 
+        @include brakepoint($tablet-bp) {
+            flex-direction: column;
+        }
+
         .selector__items {
             display: flex;
             flex-direction: column;
+
+            @include brakepoint($tablet-bp) {
+                flex-direction: row;
+                margin-bottom: 60px;
+            }
 
             .color__selector {
                 display: flex;
                 align-items: center;
                 margin-bottom: 34px;
+
+                @include brakepoint($tablet-bp) {
+                    order: 2;
+                    margin-bottom: 0;
+                }
+
                 p {
                     font-size: 24px;
                     font-weight: 300;
@@ -157,6 +211,13 @@
                 align-items: center;
                 justify-content: space-around;
                 background-color: #58585A;
+
+                @include brakepoint($tablet-bp) {
+                    width: 112px;
+                    height: 35px;
+                    order: 1;
+                    margin-right: 40px;
+                }
 
                 span {
                     font-size: 25px;

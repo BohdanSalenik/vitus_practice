@@ -17,6 +17,17 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 824px) {
+  .main-product-card__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+  }
+}
 
 .main-product-card__left {
   width: 45.8%;
@@ -24,6 +35,11 @@
   grid-template-columns: 25% 73%;
   grid-template-rows: 485px;
   grid-column-gap: 8px;
+}
+@media (max-width: 824px) {
+  .main-product-card__left {
+    width: 100%;
+  }
 }
 .main-product-card__left .min-product__photo {
   display: grid;
@@ -53,8 +69,26 @@
      object-fit: cover;
 }
 
+.main-product-card__title-mobile {
+  display: none;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+@media (max-width: 824px) {
+  .main-product-card__title-mobile {
+    display: block;
+  }
+}
+
 .main-product-card__right {
   width: 48.2%;
+}
+@media (max-width: 824px) {
+  .main-product-card__right {
+    width: 100%;
+  }
 }
 .main-product-card__right .main-product-card__description {
   margin-bottom: 22px;
@@ -63,6 +97,11 @@
   font-size: 40px;
   font-weight: 400;
   line-height: 1;
+}
+@media (max-width: 1025px) {
+  .main-product-card__right .main-product-card__title {
+    display: none;
+  }
 }
 .main-product-card__right .main-product-card__price {
   font-size: 44px;
@@ -88,6 +127,17 @@
           align-items: flex-end;
   font-size: 16px;
 }
+@media (max-width: 824px) {
+  .main-product-card__right .rating {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .main-product-card__right .rating .stars__rate img {
   width: 24px;
   height: 24px;
@@ -96,11 +146,24 @@
   font-size: 16px;
   margin-top: 1px;
 }
+@media (max-width: 824px) {
+  .main-product-card__right .rating .read-reviews {
+    margin-top: 10px;
+  }
+}
 .main-product-card__right .main-product-card__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 32px;
+}
+@media (max-width: 824px) {
+  .main-product-card__right .main-product-card__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .main-product-card__right .main-product-card__footer .selector__items {
   display: -webkit-box;
@@ -111,6 +174,15 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (max-width: 824px) {
+  .main-product-card__right .main-product-card__footer .selector__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 60px;
+  }
+}
 .main-product-card__right .main-product-card__footer .selector__items .color__selector {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,6 +191,14 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 34px;
+}
+@media (max-width: 824px) {
+  .main-product-card__right .main-product-card__footer .selector__items .color__selector {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 0;
+  }
 }
 .main-product-card__right .main-product-card__footer .selector__items .color__selector p {
   font-size: 24px;
@@ -159,6 +239,16 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #58585A;
+}
+@media (max-width: 824px) {
+  .main-product-card__right .main-product-card__footer .selector__items .pagination__selector {
+    width: 112px;
+    height: 35px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-right: 40px;
+  }
 }
 .main-product-card__right .main-product-card__footer .selector__items .pagination__selector span {
   font-size: 25px;
