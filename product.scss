@@ -288,6 +288,10 @@
         width: 100%;
         align-items: center;
 
+        @include brakepoint($tablet-bp) {
+            display: none;
+        }
+
         .slider__arrow-left {
             position: inherit;
         }
@@ -301,6 +305,100 @@
             line-height: 1;
         }
     }
+}
+
+.sale__items-mobile {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    background-color: $card__hover-bg;
+
+    @include brakepoint($tablet-bp) {
+        display: flex;
+    }
+
+    .sale__items-mobile-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        margin-top: 39px;
+
+        .plus-icon {
+            font-size: 40px;
+        }
+
+        .sale__item {
+            flex-direction: row;
+
+            .sale__item-photo {
+                width: 76px;
+                height: 76px;
+            }
+
+            .sale__item-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .sale__item-title {
+                font-size: 20px;
+            }
+
+            .old-price {
+                font-size: 18px;
+            }
+    
+            .new-price {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .total-price {
+        align-self: center;
+        margin-top: 32px;
+
+        .total-price__title {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .total-price__price {
+            font-size: 32px;
+            font-weight: 500;
+        }
+    }
+}
+
+.button__buy-mobile {
+    display: none;
+    width: 96%;
+
+    @include brakepoint($tablet-bp) {
+        display: block;
+    }
+
+        .buy-btn {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            width: 100%;
+            padding: 16px 0;
+            background-color: $secondary-blue;
+            transition: background-color .2s linear;
+
+            &:hover {
+                background-color: $button-hover;
+                color: white;
+                box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
 }
 
 .sale__item {
@@ -523,7 +621,7 @@
     margin-bottom: 120px;
 
     @include brakepoint($tablet-bp) {
-        margin-bottom: 50px;
+        margin-bottom: 50px;    
     }
 }
 

@@ -331,6 +331,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 824px) {
+  .sale__content .sale__items {
+    display: none;
+  }
+}
 .sale__content .sale__items .slider__arrow-left {
   position: inherit;
 }
@@ -340,6 +345,115 @@
 .sale__content .sale__items .plus-icon {
   font-size: 30px;
   line-height: 1;
+}
+
+.sale__items-mobile {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a1a1a;
+}
+@media (max-width: 824px) {
+  .sale__items-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.sale__items-mobile .sale__items-mobile-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+  margin-top: 39px;
+}
+.sale__items-mobile .sale__items-mobile-header .plus-icon {
+  font-size: 40px;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item .sale__item-photo {
+  width: 76px;
+  height: 76px;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item .sale__item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item .sale__item-title {
+  font-size: 20px;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item .old-price {
+  font-size: 18px;
+}
+.sale__items-mobile .sale__items-mobile-header .sale__item .new-price {
+  font-size: 24px;
+}
+.sale__items-mobile .total-price {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 32px;
+}
+.sale__items-mobile .total-price .total-price__title {
+  font-size: 24px;
+  font-weight: 300;
+}
+.sale__items-mobile .total-price .total-price__price {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.button__buy-mobile {
+  display: none;
+  width: 96%;
+}
+@media (max-width: 824px) {
+  .button__buy-mobile {
+    display: block;
+  }
+}
+.button__buy-mobile .buy-btn {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 100%;
+  padding: 16px 0;
+  background-color: #7A5CE6;
+  -webkit-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+}
+.button__buy-mobile .buy-btn:hover {
+  background-color: #593CC0;
+  color: white;
+  -webkit-box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .sale__item {
