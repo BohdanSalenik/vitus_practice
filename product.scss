@@ -75,6 +75,10 @@
     @include brakepoint($tablet-bp) {
         display: block;
     }
+
+    @include brakepoint($mobile_l-bp) {
+        font-size: 26px;
+    }
 }
 
 .main-product-card__right {
@@ -86,6 +90,10 @@
 
     .main-product-card__description {
         margin-bottom: 22px;
+
+        @include brakepoint($mobile_l-bp) {
+            margin-bottom: 17px;
+        }
     }
 
     .main-product-card__title {
@@ -103,6 +111,11 @@
         font-weight: 600;
         line-height: 1;
         margin: 24px 0;
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 28px;
+            margin-bottom: 17px;
+        }
     }
 
     .main-product-card__preview {
@@ -110,6 +123,12 @@
         font-weight: 300;
         color: #97979B;
         line-height: 160%;
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+        }
     }
 
     .rating {
@@ -123,15 +142,28 @@
             align-items: flex-start;
         }
 
+        @include brakepoint($mobile_l-bp) {
+            font-size: 14px;
+        }
+
         .stars__rate {
             img {
                 width: 24px;
                 height: 24px;
+
+                @include brakepoint($mobile_l-bp) {
+                    width: 15px;
+                    height: 15px;
+                }
             }
 
             p {
                 font-size: 16px;
                 margin-top: 1px;
+
+                @include brakepoint($mobile_l-bp) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -159,6 +191,11 @@
                 margin-bottom: 60px;
             }
 
+            @include brakepoint($mobile_l-bp) {
+                justify-content: space-between;
+                margin-bottom: 32px;
+            }
+
             .color__selector {
                 display: flex;
                 align-items: center;
@@ -169,10 +206,18 @@
                     margin-bottom: 0;
                 }
 
+                @include brakepoint($mobile_l-bp) {
+                    order: 1;
+                }
+
                 p {
                     font-size: 24px;
                     font-weight: 300;
                     margin-right: 24px;
+
+                    @include brakepoint($mobile_l-bp) {
+                        font-size: 20px;
+                    }
                 }
 
                 span {
@@ -219,6 +264,15 @@
                     margin-right: 40px;
                 }
 
+                @include brakepoint($mobile_l-bp) {
+                    order: 2;
+                    margin-right: 0;
+                }
+
+                @include brakepoint($mobile_s-bp) {
+                    width: 96px;
+                }
+
                 span {
                     font-size: 25px;
                     
@@ -261,6 +315,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 160px;
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 90px;
+    }
 
     .sale__content {
         display: flex;
@@ -321,10 +379,15 @@
     .sale__items-mobile-header {
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0 16px;
         margin-top: 39px;
+
+        @include brakepoint($mobile_l-bp) {
+            flex-direction: column;
+        }
 
         .plus-icon {
             font-size: 40px;
@@ -478,6 +541,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 160px;
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 90px;
+    }
 }
 
 .general-questions__content {
@@ -495,6 +562,14 @@
     @include brakepoint($tablet-bp) {
         font-size: 28px;
         margin-bottom: 30px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        margin-bottom: 10px;
+    }
+
+    @include brakepoint($mobile_s-bp) {
+        font-size: 22px;
     }
 }
 
@@ -519,6 +594,14 @@
         font-weight: 400;
         color: #97979B;
         line-height: 1;
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 20px;
+        }
+
+        @include brakepoint($mobile_s-bp) {
+            font-size: 18px;
+        }
     }
 
     img {
@@ -552,6 +635,11 @@
         @include brakepoint($tablet-bp) {
             line-height: 28px;
         }
+
+        @include brakepoint($mobile_l-bp) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 }
 
@@ -566,6 +654,10 @@
         font-size: 28px;
         margin-bottom: 10px;
     }
+
+    @include brakepoint($mobile_s-bp) {
+        font-size: 22px;
+    }
 }
 
 .share-hashtag {
@@ -579,6 +671,23 @@
     @include brakepoint($tablet-bp) {
         grid-template-columns: repeat(6, 340px);
         grid-template-rows: 340px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        grid-template-columns: repeat(6, 275px);
+        grid-template-rows: 275px;
+    }
+}
+
+.insta-active {
+    @include brakepoint($tablet-bp) {
+        width: 340px;
+        height: 340px;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 275px;
+        height: 275px;
     }
 }
 
@@ -601,6 +710,10 @@
         width: 95%;
         margin-top: 0;
         text-align: center;
+    }
+
+    @include brakepoint($mobile_l-bp) {
+        width: 90%;
     }
 
     .leave-review__btn {
@@ -656,6 +769,10 @@
     margin-top: 32px;
     padding-bottom: 15px;
 
+    @include brakepoint($mobile_l-bp) {
+        padding-bottom: 30px;
+    }
+
     .author__name {
         display: flex;
         font-size: 14px;
@@ -688,6 +805,11 @@
             font-size: 16px;
             line-height: 160%;
             color: #F1F2F3;
+            
+            @include brakepoint($mobile_l-bp) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
 
         a {
@@ -741,6 +863,10 @@
 
         p {
             font-size: 16px;
+
+            @include brakepoint($mobile_l-bp) {
+                display: none;
+            }
         }
 
         &:hover {
@@ -761,6 +887,10 @@
 
         p {
             font-size: 16px;
+
+            @include brakepoint($mobile_l-bp) {
+                display: none;
+            }
         }
 
         &:hover {
@@ -783,6 +913,11 @@
 
         &:hover {
             cursor: pointer;
+        }
+
+        @include brakepoint($mobile_l-bp) {
+            width: 30px;
+            height: 30px;
         }
     }
 
