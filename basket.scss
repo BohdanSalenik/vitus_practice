@@ -36,6 +36,10 @@
 
     .title-1 {
         width: 47%;
+
+        @include brakepoint($laptop-bp) {
+            width: 51%;
+        }
     }
 
     .title-2 {
@@ -150,6 +154,141 @@
         font-weight: 400;
         height: 28px;
         margin: auto 0;
+    }
+}
+
+.my-cart__content-scroll {
+    display: flex;
+    width: 5.6%;
+    align-items: center;
+
+    @include brakepoint($laptop-bp) {
+        width: 3.6%;
+    }
+    
+    span {
+        display: block;
+        width: 2px;
+        height: 317px;
+        background-color: #7E7E81;
+    }
+}
+
+.my-cart__content-right__content {
+    margin-top: 45px;
+    
+    .total-price {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .order-instructions {
+        display: flex;
+        margin-bottom: 18px;
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        img {
+            margin-left: 24px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .add-box-minus {
+            display: none;
+        }
+
+        .edit {
+            font-size: 14px;
+            font-weight: 400;
+            color: #2979FF;
+            margin-left: 11px;
+            display: none;
+        }
+
+        .edit.active {
+            display: block;
+        }
+    }
+
+    .order-instruction {
+        display: none;
+        resize: none;
+        width: 260px;
+        height: 80px;
+        background-color: #58585A;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 6px;
+        margin-bottom: 16px;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include brakepoint($laptop-bp) {
+            width: 195px;
+        }
+    }
+
+    .order-instruction.active {
+        display: block;
+    }
+
+    .add-box.active {
+        .add-box-minus {
+            display: block;
+            margin: -3px 0 0 22px;
+        }
+
+        .add-box-plus {
+            display: none;
+        }
+    }
+
+    .button-preview {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .checkout-button {
+        margin-top: 55px;
+    
+        .checkout__link {
+            padding: 18px 53px;
+            background-color: $secondary-blue;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 24px;
+            transition: all .2s linear;
+
+            &:hover {
+                background-color: $button-hover;
+                color: white;
+                box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+.my-cart__content-right__content.active {
+    margin-top: 10px;
+
+    .total-price {
+        margin-bottom: 20px;
+    }
+
+    .checkout-button {
+        margin-top: 40px;
     }
 }
 

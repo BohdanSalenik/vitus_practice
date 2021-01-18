@@ -68,4 +68,13 @@ $(document).ready(function() {
     })
 })
 
+$(document).ready(function() {
+    $('.add-box-plus').click(function(event){
+        $('.order-instruction, .add-box, .my-cart__content-right__content, .edit').toggleClass('active');
+    })
+    $('.add-box-minus').click(function(event){
+        $('.order-instruction, .add-box, .my-cart__content-right__content, .edit').removeClass('active');
+    })
+})
+
 
