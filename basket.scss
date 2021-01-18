@@ -1,6 +1,17 @@
 @import "vars";
 @import "mixins";
 
+
+.container {
+    @include brakepoint($tablet-bp) {
+        margin: 0 30px;
+    }
+}
+
+.breadcrumbs__content {
+    margin-top: 15px;
+}
+
 /*--------------------------------my-cart----------------------------*/
 
 .my-cart {
@@ -18,10 +29,18 @@
 .my-cart__content {
     display: flex;
     margin-top: 15px;
+
+    @include brakepoint($tablet-bp) {
+        flex-direction: column;
+    }
 }
 
 .my-cart__content-left {
     width: 73.4%;
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+    }
 }
 
 .card-basket__titles {
@@ -44,11 +63,28 @@
 
     .title-2 {
         width: 31%;
+
+        @include brakepoint($tablet-bp) {
+            width: 37%;
+        }
     }
 }
 
 .my-cart__content-right {
     width: 21%;
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .card-basket__titles {
+        @include brakepoint($tablet-bp) {
+            display: none;
+        }
+    }
 }
 
 .card-basket__items {
@@ -109,6 +145,10 @@
     .pagination-select {
         margin: auto 0;
         width: 20%;
+
+        @include brakepoint($tablet-bp) {
+            width: 26%;
+        }
     }
 
     .pagination__selector {
@@ -165,22 +205,40 @@
     @include brakepoint($laptop-bp) {
         width: 3.6%;
     }
+
+    @include brakepoint($tablet-bp) {
+        width: 100%;
+        margin-top: 10px;
+    }
     
     span {
         display: block;
         width: 2px;
         height: 317px;
         background-color: #7E7E81;
+
+        @include brakepoint($tablet-bp) {
+            height: 2px;
+            width: 100%;
+        }
     }
 }
 
 .my-cart__content-right__content {
     margin-top: 45px;
+
+    @include brakepoint($tablet-bp) {
+        margin-top: 30px;
+    }
     
     .total-price {
         font-size: 44px;
         font-weight: 600;
         margin-bottom: 30px;
+
+        @include brakepoint($tablet-bp) {
+            display: none;
+        }
     }
 
     .order-instructions {
@@ -237,6 +295,10 @@
         @include brakepoint($laptop-bp) {
             width: 195px;
         }
+
+        @include brakepoint($tablet-bp) {
+            width: 260px;
+        }
     }
 
     .order-instruction.active {
@@ -283,12 +345,34 @@
 .my-cart__content-right__content.active {
     margin-top: 10px;
 
+    @include brakepoint($tablet-bp) {
+        margin-top: 30px;
+    }
+
     .total-price {
         margin-bottom: 20px;
     }
 
     .checkout-button {
         margin-top: 40px;
+    }
+}
+
+.my-cart__content-right__content-mobile {
+    display: none;
+
+    .card-basket__titles {
+        display: block;
+    }
+
+    .total-price {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    @include brakepoint($tablet-bp) {
+        display: block;
     }
 }
 
