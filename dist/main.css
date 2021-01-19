@@ -145,24 +145,26 @@ header {
 
 .main-nav {
   display: flex;
+  height: 100%;
+  align-items: center;
   line-height: 1;
 }
 .main-nav a {
   font-size: 14px;
   font-weight: 400;
+  padding: 32px 16px 29px 16px;
+}
+.main-nav a:hover {
+  box-sizing: border-box;
+  border-bottom: 2px solid #7A5CE6;
+}
+.main-nav a.active {
+  border-bottom: 2px solid #7A5CE6;
 }
 @media (max-width: 1025px) {
   .main-nav {
     display: none;
   }
-}
-
-.nav__item {
-  padding: 32px 16px 29px 16px;
-}
-.nav__item:hover {
-  box-sizing: border-box;
-  border-bottom: 2px solid #7A5CE6;
 }
 
 .header__right {

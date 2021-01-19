@@ -66,6 +66,24 @@ $(document).ready(function() {
     $('.close-answer-3').click(function(event){
         $('.main-questions-3, .main-answer-3').toggleClass('active');
     })
+    $('.close-answer-4').click(function(event){
+        $('.main-questions-4, .main-answer-4').toggleClass('active');
+    })
+    $('.close-answer-5').click(function(event){
+        $('.main-questions-5, .main-answer-5').toggleClass('active');
+    })
+    $('.close-answer-6').click(function(event){
+        $('.main-questions-6, .main-answer-6').toggleClass('active');
+    })
+    $('.close-answer-7').click(function(event){
+        $('.main-questions-7, .main-answer-7').toggleClass('active');
+    })
+    $('.close-answer-8').click(function(event){
+        $('.main-questions-8, .main-answer-8').toggleClass('active');
+    })
+    $('.close-answer-9').click(function(event){
+        $('.main-questions-9, .main-answer-9').toggleClass('active');
+    })
 })
 
 $(document).ready(function() {
